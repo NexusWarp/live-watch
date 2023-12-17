@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch</title>
+    <style>
+        h2{
+            display: inline;
+            font-size: 10rem;
+            font-family:Verdana, Geneva, Tahoma, sans-serif ;
+        }
+        .box{
+            width: 100%;
+            background-color: blanchedalmond;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2 class="hrs">00</h2>
+        <h2 class="dots">:</h2>
+        <h2 class="min">00</h2>
+        <h2 class="dots">:</h2>
+        <h2 class="sec">00</h2>
+    </div>
+    <script>
+  
+    
+    function time(){
+        let currentdate = new Date();
+        let hrs = currentdate.getHours();
+        let mins = currentdate.getMinutes();
+        let sec = currentdate.getSeconds();
+        document.querySelector(".hrs").innerHTML = hrs;
+        document.querySelector(".min").innerHTML = mins;
+        document.querySelector(".sec").innerHTML = sec;
+       // console.log("1");
+    }
+    setInterval(time,1000);
+    </script>
+</body>
+</html>
